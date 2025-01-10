@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.json()) 
 
 
-initializeDatabase()   // call the database..
+initializeDatabase()  // call the database..
 
 // const students = {
 //     name: "John Doe", 
