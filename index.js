@@ -1,10 +1,13 @@
 const express = require("express")
+const cors = require("cors")
 require("dotenv").config()
 const app = express()
 
+
+
 const { initializeDatabase } = require("./db/db.connection")
 const Student = require("./models/students.model")
-const cors = require("cors")
+
 
 // middleware
 app.use(cors()) 
