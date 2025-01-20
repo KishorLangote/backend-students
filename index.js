@@ -4,14 +4,14 @@ require("dotenv").config()
 const app = express()
 
 
-
 const { initializeDatabase } = require("./db/db.connection")
 const Student = require("./models/students.model")
 
 
 // middleware
+
 app.use(cors({
-    origin: "*",
+    origin: "https://backend-students-payj8fna8-kishorlangotes-projects.vercel.app",
     methods: ["POST", "GET", "PATCH", "PUT"],
     allowedHeaders: ["Content-Type", "Authorization", "Accept"],
     credentials: true,
