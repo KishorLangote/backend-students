@@ -10,7 +10,12 @@ const Student = require("./models/students.model")
 
 
 // middleware
-app.use(cors()) 
+app.use(cors({
+    origin: "*",
+    methods: ["POST", "GET", "PATCH", "PUT"],
+    allowedHeaders: ["Content-Type", "Authorization", "Accept"],
+    credentials: true,
+})) 
 app.use(express.json()) 
 
 
