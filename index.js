@@ -4,36 +4,13 @@ require("dotenv").config()
 const app = express()
 const Student = require("./models/students.model")
 
-// const corsOptions = {
-//     origin: "https://backend-students-plum.vercel.app",
-//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//     allowedHeaders:
-//       "Origin, X-Requested-With, Content-Type, Accept, Authorization",
-  
-//     credentials: true,
-//     optionSuccessStatus: 200,
-//   };
-// app.use(cors(corsOptions))
-
-const cors = require("cors");
-const corsOptions = {
+const corsOptions = {   // middleware
   origin: "*",
   credentials: true,
   optionSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
 const { initializeDatabase } = require("./db/db.connection")
-
-
-
-// middleware
-
-// app.use(cors({
-//     origin: "https://backend-students-payj8fna8-kishorlangotes-projects.vercel.app",
-//     methods: ["POST", "GET", "PATCH", "PUT"],
-//     allowedHeaders: ["Content-Type", "Authorization", "Accept"],
-//     credentials: true,
-// })) 
 
 
 app.use(express.json()) 
