@@ -4,12 +4,20 @@ require("dotenv").config()
 const app = express()
 const Student = require("./models/students.model")
 
-const corsOptions = {   // middleware
-  origin: "https://doubt-theta.vercel.app",
-  credentials: true,
-  optionSuccessStatus: 200,
-};
-app.use(cors(corsOptions));
+
+const corsOptions = {
+    origin: "*",
+    credentials: true,
+    optionSuccessStatus: 200,
+  };
+  app.use(cors(corsOptions))
+
+// const corsOptions = {   // middleware
+//   origin: "https://doubt-theta.vercel.app",
+//   credentials: true,
+//   optionSuccessStatus: 200,
+// };
+// app.use(cors(corsOptions));
 const { initializeDatabase } = require("./db/db.connection")
 
 
