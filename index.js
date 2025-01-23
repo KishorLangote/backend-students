@@ -5,7 +5,7 @@ const app = express()
 const Student = require("./models/students.model")
 
 const corsOptions = {   // middleware
-  origin: "https://backend-students-6habg5zwk-kishorlangotes-projects.vercel.app",
+  origin: "https://doubt-theta.vercel.app",
   credentials: true,
   optionSuccessStatus: 200,
 };
